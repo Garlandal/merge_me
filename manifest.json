@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "MergeMe",
+    "version": "0.0.1",
+    "description": "consoling programmers whose branch cannot be merged",
+    "permissions": [
+        "https://github.com/"
+    ],
+    "content_scripts": [{
+        "matches": ["https://github.com/*"],
+        "js": ["js/jquery.min.js", "js/content_script.js"]
+        }],
+    "browser_action": {
+            "default_icon": "icon.png",
+            "default_title": "Merge Me",
+            "default_popup": "popup.html"
+        }
+    }
